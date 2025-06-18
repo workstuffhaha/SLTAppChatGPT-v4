@@ -1,0 +1,120 @@
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  flex-wrap: wrap;
+}
+
+.heading-section {
+  flex: 1;
+}
+
+.heading-section h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--black-text);
+  margin: 0;
+}
+
+.timestamp {
+  font-size: 14px;
+  color: var(--gray-text);
+  font-weight: 500;
+  margin-top: 0.2rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 500;
+  font-size: 16px;
+  margin-top: 0.6rem;
+}
+
+.tabs span {
+  color: var(--gray-text);
+  cursor: pointer;
+  padding-bottom: 0.4rem;
+}
+
+.tabs .active {
+  color: var(--blue);
+  border-bottom: 2px solid var(--blue);
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.avatars {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.avatars img {
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-left: -12px;
+}
+
+.more-count {
+  width: 37px;
+  height: 37px;
+  background: #f4f5fb;
+  color: var(--blue);
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -12px;
+  border: 2px solid white;
+}
+
+.create-btn {
+  background-color: var(--primary-yellow);
+  color: black;
+  font-weight: 700;
+  border: none;
+  border-radius: 25px;
+  padding: 0.6rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.username {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--black-text);
+}
+
+.more-icon {
+  padding: 0.5rem;
+  font-size: 24px;
+  color: var(--gray-text);
+  cursor: pointer;
+}

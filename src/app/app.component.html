@@ -1,0 +1,10 @@
+<div class="app-container" *ngIf="showLayout">
+  <app-left-sidebar></app-left-sidebar>
+  <div class="main-section">
+    <app-topbar></app-topbar>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<!-- Show only router-outlet if layout is hidden (e.g. login page) -->
+<router-outlet *ngIf="!showLayout"></router-outlet>

@@ -1,0 +1,12 @@
+<div class="sidebar">
+  <div class="logo-section">
+    <img src="https://1000logos.net/wp-content/uploads/2021/09/McCain-Foods-logo.png" alt="McCain Logo" class="logo" />
+    <span class="collapse-icon">«</span>
+  </div>
+
+  <ul class="menu-list">
+    <li *ngFor="let item of menuItems" [class.active]="router.url === item.route" (click)="router.navigate([item.route])">
+      <span class="label">{{ item.label }}</span>
+    </li>
+  </ul>
+</div>

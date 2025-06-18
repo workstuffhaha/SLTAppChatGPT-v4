@@ -1,0 +1,132 @@
+.regional-goal-container {
+  padding: 2rem;
+  background: #fff;
+  font-family: 'Lato', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  height: 40px;
+
+  h1 {
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .breadcrumbs {
+    font-size: 14px;
+    color: #94a3b8;
+  }
+
+  .actions button {
+    margin-left: 1rem;
+    padding: 0.6rem 1.4rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .cancel {
+    background: #f1f5f9;
+    color: #475569;
+    border: none;
+  }
+
+  .primary {
+    background: #fee000;
+    color: black;
+    border: none;
+  }
+}
+
+.goal-form h2,
+.goal-form h3 {
+  font-weight: 600;
+  margin: 1rem 0 0.5rem;
+  color: #0f172a;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+    color: #475569;
+  }
+
+  input,
+  select,
+  textarea {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    resize: none;
+  }
+
+  ul {
+    margin: 0.5rem 0;
+    padding-left: 1.25rem;
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.5;
+  }
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.chips {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+
+  .chip {
+    background: #e2e8f0;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    font-size: 13px;
+  }
+}
+
+.priority-options {
+  display: flex;
+  gap: 0.5rem;
+
+  .tag {
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .low {
+    background: #e0f2fe;
+    color: #0284c7;
+  }
+
+  .medium {
+    background: #fef9c3;
+    color: #ca8a04;
+  }
+
+  .high {
+    background: #fee2e2;
+    color: #dc2626;
+  }
+}

@@ -1,0 +1,70 @@
+<section class="metrics-section">
+    <h2 class="metrics-heading">Key Metrics</h2>
+    <div class="metrics">
+        <div class="metric-card" *ngFor="let m of metrics">
+        <span class="material-icons menu-icon">-</span>
+        <h3>{{ m.title }}</h3>
+        <h1>{{ m.value }}</h1>
+        <p [ngClass]="{
+            'positive' : m.change.startsWith('+'),
+            'negative' : m.change.startsWith('-')
+        }">{{ m.change }}</p>
+        </div>
+    </div>
+  
+</section>
+
+<section class="goals-toolbar">
+  <h2>Goals</h2>
+  <div class="sort-by">Sort By - <span class="region-sort">Region</span></div>
+  <!-- <div class="sort">
+    Sort By - <span class="material-icons">sort</span> Region
+  </div> -->
+  <div class="view-tabs">
+  <span [class.active]="currentView === 'kanban'" (click)="setView('kanban')">Kanban</span>
+  <span [class.active]="currentView === 'table'" (click)="setView('table')">Table</span>
+  <span [class.active]="currentView === 'timeline'" (click)="setView('timeline')">Timeline</span>
+</div>
+</section>
+
+
+<!-- Table View -->
+<app-goals-table *ngIf="currentView === 'table'"></app-goals-table>
+
+<!-- Kanban View -->
+<app-goals-kanban *ngIf="currentView === 'kanban'"></app-goals-kanban>
+
+<!-- Timeline View (Optional placeholder) -->
+<app-goals-timeline *ngIf="currentView === 'timeline'"></app-goals-timeline>
+
+
+
+
+<!-- <div class="goals-toolbar">
+  <h2>Goals</h2>
+  <div class="view-tabs">
+    <span class="active">Kanban</span>
+    <span>Table</span>
+    <span>Timeline</span>
+  </div>
+  <div class="sort">Sort By - <span class="material-icons"></span> Region</div>
+</div> -->
+
+<!-- <app-goals-table></app-goals-table> -->
+
+<!-- <section class="kanban-grid">
+  <div class="kanban-column" *ngFor="let region of getRegions()">
+    <h3>{{ region }} <span class="count">{{ goalsByRegion(region).length }}</span></h3>
+    <div class="goal-card" *ngFor="let goal of goalsByRegion(region)">
+  <span class="priority" [style.color]="getPriorityColor(goal.priority)">{{ goal.priority }}</span>
+  <p class="owner">{{ goal.owner }}</p>
+  <p class="title">{{ goal.title }}</p>
+  <p class="impact">Impact: {{ goal.impact }}</p>
+  <div class="avatars">
+    <img src="https://images.unsplash.com/photo-1506863530036-1efeddceb993?q=80&w=1044&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+    <div class="more-count">+3</div>
+  </div>
+</div> -->
+
+  <!-- </div>
+</section> -->

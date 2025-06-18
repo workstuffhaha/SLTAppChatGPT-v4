@@ -1,0 +1,67 @@
+<div class="goals-table-wrapper">
+  <div class="goals-table-header"></div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>
+          <input
+            type="checkbox"
+            [(ngModel)]="masterSelected"
+            (change)="toggleSelectAll()"
+          />
+        </th>
+        <th>Goal Title</th>
+        <th>2030 Strategy Priority</th>
+        <th>Region</th>
+        <th>Department</th>
+        <th>Category</th>
+        <th>Financial Impact</th>
+        <th>Status</th>
+        <th>Progress</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let goal of goals">
+        <td>
+          <input
+            type="checkbox"
+            [(ngModel)]="goal.selected"
+            (change)="checkMasterSelected()"
+          />
+        </td>
+        <td>{{ goal.title }}</td>
+        <td>{{ goal.priority }}</td>
+        <td class="region-cell">
+          <img [src]="goal.flag" alt="flag" class="flag" />
+          {{ goal.region }}
+        </td>
+        <td>{{ goal.department }}</td>
+        <td>{{ goal.category }}</td>
+        <td>{{ goal.impact }}</td>
+        <td>
+          <span [ngClass]="getStatusClass(goal.status)" class="status-badge">
+            {{ goal.status }}
+          </span>
+        </td>
+        <td>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" [style.width.%]="goal.progress"></div>
+          </div>
+          <span class="progress-text">{{ goal.progress }}%</span>
+        </td>
+        <td class="menu-cell">
+        <button class="menu-button" (click)="toggleMenu(goal)">
+            &#8942;
+        </button>
+
+        <div *ngIf="goal.showMenu" class="menu-dropdown">
+            <button (click)="editGoal(goal)">Edit</button>
+            <button (click)="deleteGoal(goal)">Delete</button>
+        </div>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>

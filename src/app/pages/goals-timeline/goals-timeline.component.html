@@ -1,0 +1,33 @@
+<div class="timeline-container">
+  <div class="timeline-grid">
+    <div class="timeline-header">
+  <div *ngFor="let month of months" class="month-block">
+    <div class="month-name">{{ month.name }}</div>
+    <div class="month-line"></div>
+    <div class="month-dates">
+      <span *ngFor="let date of month.dates" class="date">{{ date }}</span>
+    </div>
+  </div>
+</div>
+
+
+    <div class="timeline-body">
+      <div *ngFor="let goal of goals" class="timeline-row">
+        <div
+          class="timeline-block"
+          [style.left.%]="getStartOffset(goal.start)"
+          
+          [style.borderLeft]="'8px solid ' + goal.labelColor"
+        >
+          <div class="goal-title">{{ goal.title }}</div>
+          <div class="goal-meta">
+            <span class="impact">Impact: <b>{{ goal.impact }}</b></span>
+            <span class="owner">{{ goal.owner }}</span>
+          </div>
+          <span class="goal-status">{{ goal.priority }}</span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

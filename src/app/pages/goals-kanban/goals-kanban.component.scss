@@ -1,0 +1,156 @@
+.kanban-wrapper {
+  padding: 1rem;
+}
+
+.kanban-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+  }
+
+  
+}
+
+.kanban-grid {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.kanban-column {
+  background: #f9fafb;
+  padding: 0.75rem;
+  border-radius: 1rem;
+  width: 300px;
+  min-width: 280px;
+
+  .column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #1e293b;
+    }
+
+    .count {
+      background: #e2e8f0;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.875rem;
+    }
+  }
+
+  .column-divider {
+    height: 3px;
+    background: #fee000;
+    border-radius: 999px;
+    margin: 0.5rem 0 1rem;
+  }
+
+  .goal-card {
+    background: #fafafa;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+
+    .goal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .status-pill {
+        padding: 0.25rem 0.5rem;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+
+      .low {
+        background: #deedff;
+        color: #3b82f6;
+        border: 1px solid #3b82f6;
+      }
+
+      .medium {
+        background: #fff8ea;
+        color: #fb923c;
+        border: 1px solid #fb923c;
+      }
+
+      .high {
+        background: #ffeaea;
+        color: #ef4444;
+        border: 1px solid #ef4444;
+      }
+
+      .owner {
+        font-size: 0.875rem;
+        color: #94a3b8;
+        font-weight: 600;
+      }
+    }
+
+    .goal-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1e293b;
+      margin: 0.5rem 0;
+    }
+
+    .goal-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .impact {
+        font-size: 0.875rem;
+
+        .impact-label {
+          color: #94a3b8;
+        }
+
+        .impact-value {
+          font-weight: 600;
+          color: #000;
+        }
+      }
+
+      .avatars {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+
+        img {
+          width: 32px;
+          height: 32px;
+          border-radius: 999px;
+          border: 2px solid white;
+        }
+
+        .more-count {
+          background: #f4f3fe;
+          border-radius: 999px;
+          padding: 0.25rem 0.5rem;
+          font-size: 0.75rem;
+          color: #94a3b8;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
